@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Тестовое Гроу Медиа</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="form">
+            <h1 class="form__title">Заполните форму</h1>
+            <form method="post" action="https://test-2c199-default-rtdb.europe-west1.firebasedatabase.app/">
+                <div class="form__wrapper">
+                    <fieldset class="form__block">
+                        <h2 class="form__block-title">Личная информация</h2>
+                        <div class="form__input">
+                            <label for="user-name">Имя</label>
+                            <input type="text" id="user-name" name="user-name" placeholder="Иван" pattern="^[a-zA-Z][a-zA-Z_\.\s]{1,20}$" required>
+                        </div>
+                        <div class="form__input">
+                            <label for="user-mail">Email</label>
+                            <input type="email" id="user-mail" name="user-mail" placeholder="ivanov@email.ru" required>
+                        </div>
+                        <div class="form__input">
+                            <label for="user-phone">Телефон</label>
+                            <input type="tel" id="user-phone" name="user-phone" placeholder="+7 000 000-00-00" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__block">
+                        <h2 class="form__block-title">Информация о бизнесе</h2>
+                        <div class="form__input">
+                            <label for="user-sum">Ожидаемый оборот</label>
+                            <input type="number" id="user-sum" name="user-suml" step="0.01" placeholder="1000000.00" required>
+                        </div>
+                        <div class="form__input">
+                            <label for="indusry">Выбор индустрии</label>
+                            <select id="indusry">
+                              <option value="Индустрия 1">Индустрия 1</option>
+                              <option value="Индустрия 2">Индустрия 2</option>
+                              <option value="Индустрия 3">Индустрия 3</option>
+                            </select>
+                        </div>
+                        <div class="form__checkbox">
+                            <input type="checkbox" class="visually-hidden" id="user-check" required checked>
+                            <label for="user-check">Я принимаю правила сервиса
+                                <svg width="33" height="22" viewBox="0 0 33 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.3704 1.35683L31.0098 0L11.5739 19.2863L1.95311 9.69163L0.59259 11.0485L10.2134 20.6432L11.5739 22L13.0316 20.6432L32.3704 1.35683Z" fill="#5361f0"/>
+                                </svg>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form__block">
+                    <button type="submit" class="form__btn">Отправить</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <div class="modal">
+        <div class="modal__content">
+            <p class="modal__text">Спасибо! Ваша заявка принята</p>
+            <button type="button" class="modal__close" aria-label="Закрыть">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" fill="#040817"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
